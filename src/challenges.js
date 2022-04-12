@@ -29,11 +29,32 @@ function footballPoints(wins, ties) {
   return vitorias + empates;
 }
 
-console.log(footballPoints(0, 0));
+// eslint-disable-next-line sonarjs/cognitive-complexity
+function bigValue(array) {
+  let comparador = 0;
+
+  for (let index = 0; index < array.length; index += 1) {
+    comparador = array[index];
+    for (let num = 1; num < array.length; num += 1) {
+      let comparado = array[num];
+      if (comparador < comparado) {
+        comparador = comparado;
+      }
+    }
+  }
+  return comparador;
+}
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(maiorValor) {
+  let valor = bigValue(maiorValor);
+  let contador = null;
+  for (let index in maiorValor) {
+    if (valor === maiorValor[index]) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
