@@ -17,8 +17,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let reverseName = `${array[array.length - 1]}, ${array[0]}`; // template mostrado pelo Eslint https://eslint.org/docs/rules/prefer-template
+  return reverseName;
 }
 
 // Desafio 5
