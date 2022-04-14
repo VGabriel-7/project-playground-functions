@@ -141,9 +141,24 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTech, nome) {
+  // eslint-disable-next-line sonarjs/no-unused-collection
+  arrayTech.sort(); // explicação sobre a função sort() visto no  https://www.w3schools.com/js/js_array_sort.asp
+  let arrayObjetos = [];
+  // eslint-disable-next-line guard-for-in
+  for (let index in arrayTech) {
+    arrayObjetos.push({
+      tech: arrayTech[index],
+      name: nome,
+    });
+  }
+  if (arrayObjetos.length === 0) {
+    return 'Vazio!';
+  }
+  return arrayObjetos;
 }
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 module.exports = {
   calcArea,
