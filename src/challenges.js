@@ -1,33 +1,17 @@
 // Desafio 1
-function compareTrue(bolean, secondBolean) {
-  if (bolean === true && secondBolean === true) {
-    return true;
-  }
-  return false;
-}
+const compareTrue = (bolean, secondBolean) => bolean && secondBolean;
 
 // Desafio 2
-function calcArea(base, height) {
-  return (base * height) / 2;
-}
+const calcArea = (base, height) => (base * height) / 2;
 
 // Desafio 3
-function splitSentence(string) {
-  return string.split(' ');
-}
+const splitSentence = (string) => string.split(' ');
 
 // Desafio 4
-function concatName(array) {
-  let reverseName = `${array[array.length - 1]}, ${array[0]}`; // template mostrado pelo Eslint https://eslint.org/docs/rules/prefer-template
-  return reverseName;
-}
+const concatName = (array) => `${array[array.length - 1]}, ${array[0]}`; // template mostrado pelo Eslint https://eslint.org/docs/rules/prefer-template
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  let vitorias = wins * 3;
-  let empates = ties * 1;
-  return vitorias + empates;
-}
+const footballPoints = (wins, ties) => wins * 3 + ties;
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
 function bigValue(array) {
